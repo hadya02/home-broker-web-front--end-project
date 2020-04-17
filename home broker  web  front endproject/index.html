@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Broker</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+	body
+	{
+		background-color:#eee;
+	}
+	.links{
+		margin: 0;
+		padding: 0;
+	}
+	.links{
+		margin: 0 auto;
+		padding: 68px 0 0;
+		height: 25px;
+		float: left;
+	}
+	.links ul{
+		list-style: none;
+		padding: 0;
+		height: 25px;
+		float: left;
+	}
+	.links ul li{
+		margin: 0;
+		padding: 0 0 0 10px;
+		float: left;
+	}
+	.links ul li a{
+		display: block;
+		margin: 0;
+		padding: 17px 20px;
+		font-size: 20px;
+		line-height: 10px;
+		color: #002147;
+		/*font-weight: normal;*/
+		text-align: center;
+		text-decoration: none;
+		font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+	}
+	.links ul li.active a, .links ul li a:hover{
+		text-decoration: none;
+		color: white;
+		background: #002147;
+	}
+	p,h1{
+		font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	.image{
+
+	}
+	input[type=text] {
+    width: 100px;
+    box-sizing: border-box;
+   // border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 11px;
+    background-color: white;
+    background-image: url('img/searchicon.png');
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    float: right;
+    margin-right: 70px;
+    margin-top: -40px;
+}
+input[type=text]:focus {
+    width: 200px;
+}
+.slideshow{
+	background-position: center;
+	margin-left: auto;
+	margin-right: aut;
+	top: 50%;
+	left: 50%;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<style>
+	img
+	{
+		transition-property: opacity;
+		transition-duration: 3s;
+	}
+	.events b,
+	.news b{
+		display: block;
+		margin: 0;
+		padding: 25px 20px;
+		font-size: 26px;
+		line-height: 10px;
+		color: white;
+		/*font-weight: normal;*/
+		/*text-align: center;*/
+		text-decoration: none;
+		font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+
+	ul {
+		color:#002147;
+		font-size: 24px;
+	}
+	/*.newsAndEvents{
+		margin: 0;
+		padding: 0;
+	}*/
+	.newsAndEvents{
+		margin: 0 auto;
+		padding: 68px 0 0;
+		height: 25px;
+		float: left;
+	}
+	.newsAndEvents ul{
+		list-style-type: square;
+		margin-left: 25px;
+		padding: 0;
+		height: 25px;
+		float: left;
+	}
+	.newsAndEvents ul li{
+		margin: 0;
+		/*padding: 10 10 10 10px;*/
+		float: left;
+	}
+	.newsAndEvents ul li a{
+		display: block;
+		margin: 0;
+		padding: 5px;
+		font-size: 20px;
+		/*line-height: 10px;*/
+		color: #002147;
+		/*font-weight: normal;*/
+		text-align: center;
+		text-decoration: none;
+		font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		text-align: justify-all;
+
+	}
+</style>
+<script>
+	var image1 = new Image();
+	image1.src = "img/2.jpg";
+	var image2 = new Image();
+	image2.src = "img/3.jpg";
+	 var image3 = new Image();
+	 image3.src = "img/4.jpg";
+	var image4 = new Image();
+	image4.src = "img/5.jpg";
+	var image5 = new Image();
+	image5.src = "img/6.jpg";
+
+	var i=1;
+	function changefade()
+	{
+		pictureid.style.opacity=0.6;
+		setTimeout('changeimage()',3000);
+	}
+	function changeimage()
+	{
+		pictureid.style.opacity=1;
+		if(i==5)
+			i=1;
+		else
+			i++;
+		pictureid.src= eval("image"+i+".src");
+		setTimeout('changefade()', 3000);
+		// changeimage();
+	}
+</script>
+<body>
+<div class="container">
+	<div class="main">
+
+		<div class="header" style="height:150px; width:100%; background-color:#002147;">
+			<a href="http://ku.edu.af"><img src="img/1.png" style="height:150px; margin-left:30px;" ></a>
+
+
+		<a href="contact.php" data-toggle="tooltip" title="contact!" style="float: right; margin-top: -110px; margin-right: 100px;" class="image"><img src="img/contact.png"></a>
+
+		<input type="text" name="search" placeholder="Search.." style="margin-top: 70px;">
+		</div>
+		<div style="width:100%; height:0px; margin-top:25px; background-color: rgba(0,33,71,0.15); text-decoration: none; " class="links">
+			<nav>
+			<ul style="margin-top:-55px; ">
+			<li><a href="index.html" style="margin-left:200px;"><span>Home</span></a></li>
+
+			<li><a href="#"><span>House for sale &amp; Rent</span></a></li>
+			<li><a href="#"><span>About</span></a></li>
+			<li><a href="#"><span>Contact Us</span></a></li>
+
+			</ul>
+		</nav>
+		</div>
+		<div class="slideshow">
+			<span><center>
+				<!-- <h1>Hi Hello This is </h1> -->
+				<img src="img/csf.jpg" align="middle" style="width: 900px; height: 350px; margin-top: 50px; te " id="mypic">
+				<!-- <h1>Hi Hello This is </h1> -->
+			</center></span>
+		</div>
+		<center><div style="margin-top: 20px; width: 900px; ">
+
+			<marquee style="font-size: 24px; color: #002147;">The investment world has always had a mystique around it, with the perception that trading stocks or navigating the workings of the financial system requires a unique set of skills. And that idea tended to create separation between investors and the money they were putting into the market. Traditional brokerages would offer financial planning and advice, as well as conducting all the trades or other business that you needed addressed. </marquee>
+		</div></center>
+
+		<div class="newsAndEvents" style="margin-top: -50px;">
+		<div class="events" style="float: left; width: 100%x; height:300px;  margin-top: 50px;">
+			<div style=" width: 100%; height: 60px; background-color: rgba(0,33,71,0.30); color: white;">
+				<b><Center>Homes</Center></b>
+				<ul>
+					<li ><a href="homeNo1.html"><img src="img/2.jpg"style="height: 200px; width: 200px;"></a></li>
+					<!--<li style="list-style: none;"></li>-->
+					<li><a href="homeNo2.html"><img src="img/3.jpg" style="height: 200px; width: 200px;"></a>
+
+
+					<li><a href="homeNo3.html"><img src="img/4.jpg" style="height: 200px; width: 200px;" ></a></li>
+
+					<li><a href="homeNo4.html"><img src="img/5.jpg" style="height: 200px; width: 200px;"></a></li>
+					<li><a href="homeNo5.html"><img src="img/6.jpg" style="height: 200px; width: 200px;"></a></li>
+					<li><a href="homeNo6.html"><img src="img/home.jpg" style="height: 200px; width: 200px;"></a></li>
+
+
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+	<center>
+	<div style="width: 90%; height: 200px; margin-top: 400px;" >
+		<a href="#">
+			<div class="home" style=" width: 25%; height: 200px; float: left;">
+			<!-- <img src="img/csf.jpg" style="width: 22%; height: 200px; "> -->
+			<div style=" width: 100%; height: 50px; background-color: rgba(0,33,71, 0.22); ">
+				<center><h2 style="margin-top: -1px; color:#002147; padding-top: 10px;">HOME</h2></center>
+			</div>
+			<div style="width: 100%; height: 150px;">
+				<img src="img/home.jpg" height="150px" width="100%">
+			</div>
+			</a>
+		</div>
+		<a href="#"><div class="broker" style=" width:25%; height: 200px; float: left;">
+			<div style=" width: 100%; height: 50px; background-color: rgb(0,33,71); ">
+				<center><h2 style="margin-top: -1px; color:white; padding-top: 10px;">BROKER</h2></center>
+			</div>
+			<div style="width: 100%; height: 150px;">
+				<img src="img/broker.jpg" height="150px" width="100%">
+			</div>
+		</div></a>
+		<a href="#"><div class="people" style=" width: 25%; height: 200px; float: left;">
+			<div style=" width: 100%; height: 50px; background-color: rgba(0,33,71, 0.22); ">
+				<center><h2 style="margin-top: -1px; color:#002147; padding-top: 10px; text-decoration: none;">ANNOUNCEMENTS </h2></center>
+			</div></a>
+
+			<div style="width: 100%; height: 150px;">
+				<img src="img/announcement.jpg" height="150px" width="100%">
+			</div>
+
+		</div>
+		<div class="price" style=" width: 25%; height: 200px; float: right;">
+			<div style=" width: 100%; height: 50px; background-color: rgb(0,33,71); ">
+				<center><h2 style="margin-top: -1px; color:white; padding-top: 10px; text-decoration: none;">PRICE</h2></center>
+			</div>
+			<div style="width: 100%; height: 150px;">
+				<img src="img/price.jpg" height="150px" width="100%">
+			</div>
+		</div>
+
+	</div>
+	</center>
+	</div>
+	<footer style="border: 1px solid black; width: 100%; height: 150px; margin-top: 50px; background-color: #002147;">
+	<center>
+		<img src="img/1.png" style="margin-top: 0px;">
+		<p style="color: white; margin-top: -70px;">&copy; Home Broker 2018</p>
+	</center>
+	<div style="margin-top: -140px;">
+		<h3 style="color: white; padding-left: 50px;">Address:</h3>
+		<p style="color:white; padding-left:60px; ">Pule-Surkh, Kabul Afghanistan</p>
+		<p style="color:white; padding-left: 60px;">District 3, Kabul, Afghanistan</p>
+		<p style="color:white; padding-left: 60px;">Phone: +93 20 250 42 89</p>
+	</div>
+	<div style=" width: 400px; height: 50px; float: right; margin-top:-150px;">
+		<p style="font-size: 20px; color: white;"><b>Follow us:<b></p>
+		<a href="https://www.facebook.com" class="fa fa-facebook" style="background: #3B5998;
+    color: white;" ></a>
+		<a href="https://www.twitter.com" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com" class="fa fa-instagram"></a>
+		<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+		<a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+		<a href="https://plus.google.com" class="fa fa-google-plus"></a>
+
+	</div>
+
+	</footer>
+</div>
+</body>
+<script>
+	var pictureid = document.getElementById("mypic");
+	changeimage();
+
+</script>
+</html>
